@@ -12,6 +12,7 @@ export class Navbar extends Component {
     title: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired
   }
+  
   render() {
     return (
       <nav className= "navbar bg-primary">
