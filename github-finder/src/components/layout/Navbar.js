@@ -11,6 +11,7 @@ const Navbar = /*(props)*/ ({ icon, title }) => {
       </h1>
       <ul>
         <li>
+          {/*Searches will now persist when moving pages*/}
           <Link to='/'>Home</Link>
         </li>
         <li>
