@@ -1,24 +1,26 @@
-import React, { useState, useContext } from 'react';
-import PropTypes from 'prop-types';
-import GithubContext from '../../context/github/githubContext';
+import React, { useState, useContext } from "react";
+import GithubContext from "../../context/github/githubContext";
+import AlertContext from "../../context/alert/alertContext";
 
-const Search = ({ setAlert }) => {
+const Search = ({}) => {
   const githubContext = useContext(GithubContext);
+  const alertContext = useContext(AlertContext);
   // useState hook
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
+  const { setAlert } = alertContext;
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
-    if (text === '') {
-      setAlert('Please enter some text', 'light');
+    if (text === "") {
+      setAlert("Please enter some text", "light");
     } else {
       githubContext.searchUsers(text);
-      setText('');
+      setText("");
     }
   };
 
   // Sets the state of the text when typed.
-  const onChange = (e) =>
+  const onChange = e =>
     // e.target.name instead of texts means it will work for email, text, etc
     setText(e.target.value);
 
@@ -48,10 +50,6 @@ const Search = ({ setAlert }) => {
       )}
     </div>
   );
-};
-
-Search.propTypes = {
-  setAlert: PropTypes.func.isRequired,
 };
 
 export default Search;
