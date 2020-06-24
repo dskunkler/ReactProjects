@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
-import UserItem from './UserItem';
-import Spinner from '../layout/Spinner';
-import PropTypes from 'prop-types';
-import GithubContext from '../../context/github/githubContext';
+import React, { useContext } from "react";
+import UserItem from "./UserItem";
+import Spinner from "../layout/Spinner";
+import GithubContext from "../../context/github/githubContext";
 
 const Users = () => {
   const githubContext = useContext(GithubContext);
@@ -12,7 +11,7 @@ const Users = () => {
   } else {
     return (
       <div style={userStyle}>
-        {users.map((user) => (
+        {users.map(user => (
           <UserItem key={user.id} user={user} />
         ))}
       </div>
@@ -21,9 +20,9 @@ const Users = () => {
 };
 
 const userStyle = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3,1fr)',
-  gridGap: '1rem',
+  display: "grid",
+  gridTemplateColumns: "repeat(3,1fr)",
+  gridGap: "1rem",
 };
 
 export default Users;
