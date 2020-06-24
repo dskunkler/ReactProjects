@@ -101,11 +101,11 @@ const User = ({ getUserRepos, repos, match }) => {
   );
 };
 
-User.propTypes = {
-  loading: PropTypes.bool.isRequired,
-  user: PropTypes.object.isRequired,
-  getUser: PropTypes.func.isRequired,
-  getUserRepos: PropTypes.func.isRequired,
-  repos: PropTypes.array.isRequired,
-};
+// User.propTypes = {
+//   loading: PropTypes.bool.isRequired,
+//   user: PropTypes.object.isRequired,
+//   getUser: PropTypes.func.isRequired,
+//   getUserRepos: PropTypes.func.isRequired,
+//   repos: PropTypes.array.isRequired,
+// };
 export default User;
